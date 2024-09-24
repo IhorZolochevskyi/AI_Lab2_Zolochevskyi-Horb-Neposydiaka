@@ -13,9 +13,14 @@ namespace lab2
             do
             {
                 Console.WriteLine("Ласкаво просимо до гри Нім!");
-
+            start:; // Мітка для повернення до початку гри
                 Console.WriteLine("Оберіть варіант гри (1 - Пряма гра, 2 - Зворотна гра): ");
                 int gameMode = int.Parse(Console.ReadLine());
+                if (gameMode != 1 && gameMode != 2)
+                {
+                    Console.WriteLine("Виберіть вірний режим гри!!!");
+                    goto start;
+                }
 
                 Console.WriteLine("Оберіть кількість монет (N): ");
                 int N = int.Parse(Console.ReadLine());
